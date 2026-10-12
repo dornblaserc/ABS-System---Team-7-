@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # ABS-System---Team-7-
 
 
