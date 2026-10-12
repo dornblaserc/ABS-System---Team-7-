@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['Baseball']
+
+roboflow:
+  workspace: chase-dornblaser
+  project: baseball-r0ahq
+  version: 3
+  license: Private
+  url: https://app.roboflow.com/chase-dornblaser/baseball-r0ahq/3

@@ -1,6 +1,0 @@
-python -m pip install baseballcv ultralytics
-python -m pip install "setuptools<81" --force-reinstall
-python -m pip install "stringzilla==5.1.1"
-python -m pip install "protobuf>=4.25.3,<5" --force-reinstall
-mkdir C:\Users\Student\.baseballcv -Force
-"installed" | Out-File -Encoding ascii C:\Users\Student\.baseballcv\.baseballcv_git_deps_installed

@@ -1,0 +1,3 @@
+baseballcv
+ultralytics
+opencv-python
