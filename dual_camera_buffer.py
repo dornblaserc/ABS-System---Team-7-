@@ -62,7 +62,7 @@ from collections import deque  # a list with a fixed maximum length (the ring bu
 
 import cv2                     # OpenCV: talks to cameras and handles images
 import numpy as np             # NumPy: fast math on lists of numbers
-
+import frame_subtraction as frame_sub
 # ---------------------------------------------------------------------------
 # CONFIG - the settings you are most likely to change.
 # Everything else in the file reads these values.
@@ -79,7 +79,7 @@ WIDTH, HEIGHT = 640, 360
 
 # Frames per second (fps) we ASK the camera for. The camera may deliver a
 # little less, depending on lighting, USB speed and exposure.
-TARGET_FPS = 60
+TARGET_FPS = 230
 
 # How many frames per second to assume when sizing the memory buffer.
 # Keep this about equal to the fps you actually get.
@@ -127,6 +127,7 @@ CAL_FILE = "calibration.json"   # where the LED boxes and offset are remembered
 # ===========================================================================
 # CAMERA READER
 # ===========================================================================
+
 class CamThread(threading.Thread):
     """
     One of these objects looks after ONE camera.
@@ -642,6 +643,8 @@ def main():
 
             elif key in (ord("s"), ord("S"), 32):        # s, S, or the Spacebar
                 save_clip(cams[0], cams[1], state["offset"])
+                frame_sub.detect_motion()
+
 
     finally:
         # Whatever happens (quit, error, Ctrl+C), always shut things down

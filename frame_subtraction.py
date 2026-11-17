@@ -163,6 +163,6 @@ def detect_motion(source, output_dir, thresh=25, min_area=500):
         cap.release()
 
 detect_motion(
-    source="C:/Users/Student/Downloads/ABS-System---Team-7-/test.mp4",
+    source="C:/Users/Student/Downloads/ABS-System---Team-7-/frames_in",
     output_dir="C:/Users/Student/Downloads/ABS-System---Team-7-/frames_out"
 )
